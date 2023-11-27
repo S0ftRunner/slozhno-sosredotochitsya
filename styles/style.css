@@ -1,5 +1,71 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: var(--background-photo);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  padding-block-start: 20px;
+  padding-block-end: 20px;
+  font-family: 'IBM Plex mono', sans-serif;
+  color: #ff0070;
+}
+
+.header__theme-menu {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 4.375em);
+  place-self: end;
+  align-items: center;
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+  height: 26px;
+  background-color: transparent;
+  text-align: center;
+  font-family: inherit;
+  font-size: 18px;
+  color: inherit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 100% */
+  text-transform: lowercase;
+  border: none;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid #ff0070;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+  cursor: pointer;
+}
+
+/* сделал так, чтобы не перебивались цвета границ у активной кнопки */
+.header__theme-menu-button_active:hover {
+  border: 1px solid #ff0070;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid #ff0070;
+}
+
+.header__decoration-start {
+  display: flex;
+  place-self: end;
 }
