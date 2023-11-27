@@ -18,14 +18,12 @@
 
 .header__theme-menu {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
 }
 
 .header__theme-menu-list {
   display: grid;
   grid-template-columns: repeat(3, 4.375em);
-  place-self: end;
+  place-self: center;
   align-items: center;
   list-style: none;
 }
@@ -67,6 +65,12 @@
 }
 
 .header__decoration-start {
-  display: flex;
-  place-self: end;
+  position: absolute;
+  right: 3rem;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  direction: rtl;
+  float: left;
+  list-style: ellipse;
 }
