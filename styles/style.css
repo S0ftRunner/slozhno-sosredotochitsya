@@ -1,17 +1,17 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  overflow-x: hidden;
   background-image: var(--background-photo);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-inline-start: 20px;
-  padding-inline-end: 20px;
+  padding-inline-start: 1.25rem;
+  padding-inline-end: 1.25rem;
   padding-block-start: 5px;
   padding-block-end: 20px;
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   color: #ff0070;
   margin: 0;
 }
@@ -21,9 +21,9 @@
 }
 
 .header__theme-menu-list {
-  padding-inline-start: 0;
+  padding-inline-start: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 4.375em);
+  grid-template-columns: repeat(3, 1fr);
   place-self: center;
   align-items: center;
   list-style: none;
@@ -51,7 +51,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.40);
+  border: 1px solid rgba(255, 0, 112, 0.4);
   cursor: pointer;
 }
 
@@ -66,21 +66,48 @@
   border-bottom: 1px solid #ff0070;
 }
 
-.header__decoration-start {
+.header__decoration-rec {
+  margin: 0;
+  margin-block-start: 1rem;
+  position: relative;
+  list-style: none;
   padding-inline-start: 0;
   position: absolute;
   top: 0.3rem;
-  right: 1.8rem;
-  color: #FF0070;
+  right: 2rem;
+  color: #ff0070;
   text-align: center;
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 25px; /* 138.889% */
-  direction: rtl;
-  float: left;
-  list-style-image: url(../images/Ellipse.svg);
-  border-top: 1px solid #FF0070;
 }
+
+
+.header__decoration-rec::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -30px;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+  border-top: 1px solid #ff0070;
+  border-right: 1px solid #ff0070;
+
+}
+
+/* TODO: придумать как добавить размытие */
+.marker-rec::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  top: 5px;
+  right: -20px;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: #ff0070;
+}
+
