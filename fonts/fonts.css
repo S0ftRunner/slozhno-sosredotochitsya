@@ -2,7 +2,7 @@
   font-family: 'IBM Plex mono';
   src: url(./IBMPlexMono-Regular.woff) format('woff');
   font-weight: normal;
-  /* font-display: swap; */
+  font-display: swap;
 }
 
 @font-face {
