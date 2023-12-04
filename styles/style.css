@@ -2,7 +2,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-<<<<<<< Updated upstream
   overflow-x: hidden;
   background-image: var(--background-photo);
   background-attachment: fixed;
@@ -15,13 +14,6 @@
   font-family: 'IBM Plex mono', sans-serif;
   color: #ff0070;
   margin: 0;
-=======
-  background-image: url(../images/cover-image-dark.png);
-  background-attachment: fixed;
-  margin-inline-start: 10px;
-  margin-inline-end: 10px;
-  max-width: 375px;
->>>>>>> Stashed changes
 }
 
 .header {
