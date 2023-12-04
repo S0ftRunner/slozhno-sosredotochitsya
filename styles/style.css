@@ -11,20 +11,17 @@
   padding-inline-end: 20px;
   padding-block-start: 20px;
   padding-block-end: 20px;
-  font-family: "IBM Plex mono", sans-serif;
-  color: var(--font-color);
+  font-family: 'IBM Plex mono', sans-serif;
+  color: #ff0070;
   margin: 0;
 }
 
 .header {
+  block-size: clamp(668px, 730px, 1024px);
   position: relative;
   display: grid;
-  grid-template-rows: 0.5fr min-content 1fr;
-}
-
-.decorated-zone::after {
-  content: "rec";
-  text-transform: uppercase;
+  grid-template-rows: 0.1fr min-content 1fr;
+  margin-block-end: 20px;
 }
 
 .decorated-zone::before {
@@ -40,72 +37,51 @@
 }
 
 .header__theme-menu {
-  justify-self: center;
+  display: grid;
 }
 
 .header__theme-menu-list {
-  margin-inline-start: 1rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
   display: flex;
   flex-direction: row;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
   gap: 10px;
-  justify-content: space-between;
 }
-
 
 .header__theme-menu-button {
-  padding-block-start: 2px;
-  padding-block-end: 2px;
-  padding-inline-start: 12px;
-  padding-inline-end: 12px;
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+  height: 26px;
   background-color: transparent;
-  border: none;
-  text-transform: lowercase;
   text-align: center;
+  font-family: inherit;
   font-size: 18px;
+  color: inherit;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 100% */
-}
-
-.decorated-rec {
-  position: absolute;
-  right: 0;
-  
-  
-}
-
-
-.decorated-rec::after {
-  content: "";
-  position: absolute;
-  inline-size: 25px;
-  block-size: 25px;
-  background-color: transparent;
-  border-top: 1px solid #ff0070;
-  border-right: 1px solid #ff0070;
-  right: 0;
-  text-transform: uppercase;
-}
-
-.header__theme-menu-button:hover {
-  box-sizing: border-box;
-  cursor: pointer;
-  border: 1px solid rgba(255, 0, 112, 0.4);
-}
-
-.header__theme-menu-button:focus-visible {
-  /* Как лушче поступить с outline? Оставить так? */
-  outline: none;
-  border-bottom: 1px solid #ff0070;
+  line-height: 18px;
+  text-transform: lowercase;
+  border: none;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid #ff0070;
 }
 
-/* Чтобы не перебивался стиль для active */
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+  cursor: pointer;
+}
+
+/* сделал так, чтобы не перебивались цвета границ у активной кнопки */
 .header__theme-menu-button_active:hover {
   border: 1px solid #ff0070;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -118,8 +94,7 @@
   margin-block-start: 1rem;
   list-style: none;
   padding-inline-start: 0;
-  top: 0.3rem;
-  right: 3rem;
+  right: 0;
   color: #ff0070;
   text-align: center;
   font-family: "IBM Plex Mono", sans-serif;
@@ -131,18 +106,27 @@
   /* 138.889% */
 }
 
-
+/* декоративный элемент справа сверху */
 .header__decoration-rec::after {
   position: absolute;
   content: "";
   top: 0;
-  right: -28px;
+  right: 0;
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
   border-top: 1px solid #ff0070;
   border-right: 1px solid #ff0070;
 
+}
+
+
+/* Декоративный элемент REC */
+.marker-rec::before {
+  content: "rec";
+  position: absolute;
+  top: 0;
+  right: 1.9rem;
 }
 
 /* TODO: придумать как добавить размытие */
@@ -155,11 +139,12 @@
   inline-size: 9px;
   block-size: 9px;
   background-color: #ff0070;
+  filter: drop-shadow(0px 0px 4px #FF0070);
 }
 
 .page__title {
   margin-inline-start: -20px;
-  margin-block-start: 17rem;
+  margin-block-start: 16rem;
   word-spacing: 0.2rem;
   color: #DB00FF;
   text-shadow: 4px 4px 0px #FF0070;
@@ -170,7 +155,8 @@
 }
 
 .page__description {
-  margin-block-start: 7rem;
+  margin-block-start: 0.9rem;
+  margin-block-end: clamp(66px, 134px, 183px);
   justify-self: end;
   color: #000028;
   font-size: 18px;
@@ -179,8 +165,7 @@
   line-height: 23.4px;
   max-inline-size: 491px;
   min-inline-size: 355px;
-  min-block-size: 71px;
-  max-block-size: 117px;
+  max-block-size: 71px;
   /* 130% */
 }
 
