@@ -11,164 +11,85 @@
   padding-inline-end: 20px;
   padding-block-start: 20px;
   padding-block-end: 20px;
-  font-family: 'IBM Plex mono', sans-serif;
-  color: #ff0070;
+  font-family: "IBM Plex mono", sans-serif;
+  color: var(--font-color);
   margin: 0;
 }
 
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: min-content 1fr 0.2fr;
-}
-
-.decorated-zone::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  inline-size: 25px;
-  block-size: 25px;
-  background-color: transparent;
-  border-bottom: 1px solid #FF0070;
-  border-left: 1px solid #FF0070;
-  
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .header__theme-menu {
-  display: grid;
+  justify-self: center;
 }
 
 .header__theme-menu-list {
-  padding-inline-start: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  place-self: center;
-  align-items: center;
-  list-style: none;
+  margin-inline-start: 1rem;
+  display: flex;
+  flex-direction: row;
   gap: 10px;
+  justify-content: space-between;
 }
 
+
 .header__theme-menu-button {
-  padding-inline-start: 13px;
-  padding-inline-end: 13px;
-  height: 26px;
+  padding-block-start: 2px;
+  padding-block-end: 2px;
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
   background-color: transparent;
+  border: none;
+  text-transform: lowercase;
   text-align: center;
-  font-family: inherit;
   font-size: 18px;
-  color: inherit;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
-  text-transform: lowercase;
-  border: none;
+  line-height: 18px; /* 100% */
+}
+
+.decorated-rec {
+  position: absolute;
+  right: 0;
+  
+  
+}
+
+.decorated-rec::before {
+
+}
+
+.decorated-rec::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+  border-top: 1px solid #ff0070;
+  border-right: 1px solid #ff0070;
+  right: 0;
+  text-transform: uppercase;
+}
+
+.header__theme-menu-button:hover {
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button:focus-visible {
+  /* Как лушче поступить с outline? Оставить так? */
+  outline: none;
+  border-bottom: 1px solid #ff0070;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid #ff0070;
 }
 
-.header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
-  cursor: pointer;
-}
-
-/* сделал так, чтобы не перебивались цвета границ у активной кнопки */
+/* Чтобы не перебивался стиль для active */
 .header__theme-menu-button_active:hover {
   border: 1px solid #ff0070;
-  cursor: pointer;
-}
-
-.header__theme-menu-button:focus-visible {
-  outline: none;
-  border-bottom: 1px solid #ff0070;
-}
-
-.header__decoration-rec {
-  margin: 0;
-  margin-block-start: 1rem;
-  position: relative;
-  list-style: none;
-  padding-inline-start: 0;
-  top: 0.3rem;
-  right: 3rem;
-  color: #ff0070;
-  text-align: center;
-  font-family: "IBM Plex Mono", sans-serif;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  /* 138.889% */
-}
-
-
-.header__decoration-rec::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: -28px;
-  inline-size: 25px;
-  block-size: 25px;
-  background-color: transparent;
-  border-top: 1px solid #ff0070;
-  border-right: 1px solid #ff0070;
-
-}
-
-/* TODO: придумать как добавить размытие */
-.marker-rec::after {
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  top: 5px;
-  right: -20px;
-  inline-size: 9px;
-  block-size: 9px;
-  background-color: #ff0070;
-}
-
-.page__title {
-  margin-inline-start: -20px;
-  margin-block-start: 17rem;
-  word-spacing: 0.2rem;
-  color: #DB00FF;
-  text-shadow: 4px 4px 0px #FF0070;
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 82.5%;
-}
-
-.page__description {
-  margin-block-start: 7rem;
-  justify-self: end;
-  color: #000028;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23.4px;
-  max-inline-size: 491px;
-  min-inline-size: 355px;
-  min-block-size: 71px;
-  max-block-size: 117px;
-  /* 130% */
-}
-
-.title-decor {
-  background-color: #FF0070;
-}
-
-
-
-
-@media(max-width: 375px) {
-.page {
-  justify-content: center;
-}
-
-  .page__description {
-    justify-self: center;
-  }
 }
