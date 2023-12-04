@@ -7,10 +7,10 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-inline-start: 1.25rem;
-  padding-inline-end: 1.25rem;
-  padding-block-start: 1.25rem;
-  padding-block-end: 1.25rem;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  padding-block-start: 20px;
+  padding-block-end: 20px;
   font-family: 'IBM Plex mono', sans-serif;
   color: #ff0070;
   margin: 0;
@@ -94,9 +94,8 @@
   margin-block-start: 1rem;
   list-style: none;
   padding-inline-start: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
+  top: 0.3rem;
+  right: 3rem;
   color: #ff0070;
   text-align: center;
   font-family: "IBM Plex Mono", sans-serif;
@@ -113,7 +112,7 @@
   position: absolute;
   content: "";
   top: 0;
-  right: 0;
+  right: -28px;
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
@@ -136,7 +135,7 @@
 
 .page__title {
   margin-inline-start: -20px;
-  margin-block-start: 16rem;
+  margin-block-start: 17rem;
   word-spacing: 0.2rem;
   color: #DB00FF;
   text-shadow: 4px 4px 0px #FF0070;
@@ -147,9 +146,7 @@
 }
 
 .page__description {
-  margin: 0;
-  white-space: wrap;
-  margin-block-start: 0.6rem;
+  margin-block-start: 7rem;
   justify-self: end;
   color: #000028;
   font-size: 18px;
@@ -157,7 +154,9 @@
   font-weight: 700;
   line-height: 23.4px;
   max-inline-size: 491px;
-  block-size: 4.4375rem;
+  min-inline-size: 355px;
+  min-block-size: 71px;
+  max-block-size: 117px;
   /* 130% */
 }
 
@@ -173,6 +172,10 @@
 
 
 @media(max-width: 375px) {
+.page {
+  justify-content: center;
+}
+
   .page__description {
     justify-self: center;
   }
