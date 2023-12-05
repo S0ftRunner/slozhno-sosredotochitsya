@@ -157,7 +157,7 @@
 }
 
 .page__description {
-  margin-block-start: 7rem;
+  margin-block-start: 7.2rem;
   margin-block-end: clamp(66px, 134px, 183px);
   justify-self: end;
   color: #000028;
