@@ -17,7 +17,7 @@
   padding-inline-start: 20px;
   padding-inline-end: 20px;
   background-size: contain;
-  block-size: clamp(668px, 730px, 1024px);
+  block-size: clamp(668px, 768px, 1024px);
   position: relative;
   display: grid;
   grid-template-rows: 0.1fr min-content 1fr;
@@ -31,7 +31,7 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: max(10px, 20px);
   left: max(10px, 20px);
   inline-size: 25px;
   block-size: 25px;
@@ -157,7 +157,7 @@
 }
 
 .page__description {
-  margin-block-start: 0.9rem;
+  margin-block-start: 7rem;
   margin-block-end: clamp(66px, 134px, 183px);
   justify-self: end;
   color: #000028;
@@ -190,9 +190,11 @@
   margin-block-start: max(40px, 60px);
   display: grid;
   grid-template-columns: 0.3fr 0.6fr;
+  gap: 20px;
 }
 
 .first-question__title {
+
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
