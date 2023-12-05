@@ -189,15 +189,43 @@
 .first-question__section {
   margin-block-start: max(40px, 60px);
   display: grid;
-  grid-template-columns: 0.3fr 0.6fr;
+  grid-template-columns: minmax(236px, 315px) minmax(472px, 649px);
+  grid-template-rows: max-content minmax();
   gap: 20px;
 }
 
 .first-question__title {
-
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
+  line-height: 23.4px; /* 130% */
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__answer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer__title {
+  display: block;
+  color: #000028;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+}
+
+.answer__description {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 23.4px; /* 130% */
 }
 
