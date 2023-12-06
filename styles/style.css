@@ -247,6 +247,11 @@
   line-height: 23.4px; /* 130% */
 }
 
+.link {
+  text-decoration: none;
+  text-shadow: 4px 4px 0px rgba(255, 0, 111, 0.40);
+}
+
 @media (max-width: 375px) {
   .page {
     justify-content: center;
