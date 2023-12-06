@@ -13,6 +13,7 @@
   background-color: #000028;
 }
 
+/* сделал для более красивого дизайна */
 .dark__backround-image-header::before {
   content: "";
   position: absolute;
@@ -180,7 +181,7 @@
   line-height: 23.4px;
   max-inline-size: 491px;
   min-inline-size: 355px;
-  max-block-size: 71px;
+  max-block-size: 117px;
   /* 130% */
 }
 
