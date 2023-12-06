@@ -28,7 +28,6 @@
 }
 
 .header {
-
   padding-block-start: 20px;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
@@ -169,7 +168,7 @@
   word-spacing: 0.2rem;
   color: #db00ff;
   text-shadow: 4px 4px 0px #ff0070;
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
@@ -259,8 +258,13 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width <= 768px) {
+
   .page__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .page__description {
     block-size: 117px;
   }
 }
