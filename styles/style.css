@@ -2,6 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  position: relative;
   overflow-x: hidden;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -12,7 +13,21 @@
   background-color: #000028;
 }
 
+.dark__backround-image-header::before {
+  content: "";
+  position: absolute;
+  background-image: var(--background-photo);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  block-size: clamp(688px, 788px, 1048px);
+  width: 100%;
+}
+
 .header {
+  margin: auto;
+  max-inline-size: 1024px;
   padding-block-start: 20px;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
@@ -22,9 +37,7 @@
   display: grid;
   grid-template-rows: 0.1fr min-content 1fr;
   margin-block-end: 20px;
-  background-image: var(--background-photo);
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 /* декоративный элемент нижний */
@@ -180,6 +193,8 @@
 }
 
 .main {
+  margin: auto;
+  max-inline-size: 1024px;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
   background-color: #000028;
