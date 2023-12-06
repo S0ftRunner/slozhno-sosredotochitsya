@@ -22,13 +22,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   top: 0;
+  /* тут я добавил к размеру хедера его паддинг 20px */
   block-size: clamp(688px, 788px, 1048px);
   width: 100%;
 }
 
 .header {
-  margin: auto;
-  max-inline-size: 1024px;
+
   padding-block-start: 20px;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
@@ -39,6 +39,11 @@
   grid-template-rows: 0.1fr min-content 1fr;
   margin-block-end: 20px;
 
+}
+
+.centering {
+  margin: auto;
+  max-inline-size: 1024px;
 }
 
 /* декоративный элемент нижний */
@@ -194,8 +199,6 @@
 }
 
 .main {
-  margin: auto;
-  max-inline-size: 1024px;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
   background-color: #000028;
@@ -252,5 +255,12 @@
 
   .page__description {
     justify-self: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .page__title {
+    block-size: 117px;
   }
 }
