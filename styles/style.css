@@ -208,11 +208,10 @@
   margin-block-start: max(40px, 60px);
   display: grid;
   grid-template-columns: minmax(236px, 315px) minmax(472px, 649px);
-  grid-template-rows: max-content minmax();
   gap: 20px;
 }
 
-.first-question__title {
+.question__title {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -241,6 +240,7 @@
 }
 
 .answer__description {
+  color: #F1B2CE;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -249,7 +249,24 @@
 
 .link {
   text-decoration: none;
-  text-shadow: 4px 4px 0px rgba(255, 0, 111, 0.40);
+  text-shadow: 2px 2px 0px rgba(255, 0, 111, 0.80);
+}
+
+.link:hover {
+  border-bottom: 1px solid #F1B2CE;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid #F1B2CE;
+  outline-offset: -2px;
+}
+
+.second-question__section {
+  margin-block-start: max(50px, 80px);
 }
 
 @media (max-width: 375px) {
