@@ -218,7 +218,7 @@
   line-height: 23.4px; /* 130% */
 }
 
-.answer {
+.column__answer-container{
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -267,7 +267,28 @@
 
 .second-question__section {
   margin-block-start: max(50px, 80px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
+.second__question-title {
+  inline-size: clamp(236px, 315px, 355px);
+  justify-self: flex-start;
+}
+
+/* такое ощущение, что я делаю костыли */
+.second__card-answer-size {
+  inline-size: 315px;
+  block-size: 384px;
+}
+
+.row__answer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 
 @media (max-width: 375px) {
   .page {
@@ -280,7 +301,7 @@
 }
 
 
-@media (max-width <= 768px) {
+@media (max-width: 768px) {
 
   .page__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -288,5 +309,15 @@
 
   .page__description {
     block-size: 117px;
+  }
+
+  .row__answer-container {
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+  .second__card-answer-size {
+    inline-size: 100%;
+    block-size: 174px;
   }
 }
