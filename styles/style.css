@@ -24,7 +24,7 @@
   top: 0;
   /* тут я добавил к размеру хедера его паддинг 20px */
   block-size: clamp(688px, 788px, 1048px);
-  width: 100%;
+  width: 100vw;
 }
 
 .header {
