@@ -308,8 +308,61 @@
   /* 130% */
 }
 
-.picture__section {
+.pictures__section {
   margin-block-start: max(50px, 80px);
+  display: flex;
+  flex-direction: column;
+  gap: max(10px, 20px);
+}
+
+.pictures__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+ 
+  
+    
+
+}
+
+.sunset__picture {
+  grid-row: 1;
+  grid-column: span 2;
+  max-block-size: 260px;
+  min-block-size: 142px;
+  max-inline-size: 649px;
+  min-inline-size: 142px;
+  object-fit: cover;
+}
+
+.ice-cream__picture {
+  grid-column: span 2;
+  grid-row: 1 / span 3;
+  grid-area: ice-cream;
+  max-block-size: 595px;
+  min-block-size: 355px;
+  max-inline-size: 355px;
+  min-inline-size: 229px;
+  object-fit: cover;
+
+}
+
+.tape__picture {
+  grid-area: tape__picture;
+  object-fit: cover;
+
+}
+
+.books__picture {
+  grid-area: books__picture;
+  object-fit: cover;
+
+}
+
+.street__picture {
+  object-fit: cover;
+
+
 }
 
 
