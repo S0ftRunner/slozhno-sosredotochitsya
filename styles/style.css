@@ -45,6 +45,18 @@
   max-inline-size: 1024px;
 }
 
+.decorated-zone::after {
+  position: absolute;
+  content: "";
+  top: max(10px, 20px);
+  right: max(10px, 20px);
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+  border-top: 1px solid #ff0070;
+  border-right: 1px solid #ff0070;
+}
+
 /* декоративный элемент нижний */
 .decorated-zone::before {
   content: "";
@@ -128,19 +140,6 @@
   /* 138.889% */
 }
 
-/* декоративный элемент справа сверху */
-.header__decoration-rec::after {
-  position: absolute;
-  content: "";
-  top: max(10px, 20px);
-  right: max(10px, 20px);
-  inline-size: 25px;
-  block-size: 25px;
-  background-color: transparent;
-  border-top: 1px solid #ff0070;
-  border-right: 1px solid #ff0070;
-}
-
 /* Декоративный элемент REC */
 .marker-rec::before {
   content: "rec";
@@ -166,6 +165,9 @@
   margin-inline-start: -20px;
   margin-block-start: 16rem;
   word-spacing: 0.2rem;
+}
+
+.stylish__text {
   color: #db00ff;
   text-shadow: 4px 4px 0px #ff0070;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -318,51 +320,82 @@
 .pictures__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
- 
-  
-    
-
+  grid-template-rows: minmax(auto, 260px) minmax(auto, 315px) minmax( auto, 435px);
+  gap: 20px;
 }
 
 .sunset__picture {
-  grid-row: 1;
+
   grid-column: span 2;
-  max-block-size: 260px;
-  min-block-size: 142px;
-  max-inline-size: 649px;
-  min-inline-size: 142px;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 }
 
 .ice-cream__picture {
-  grid-column: span 2;
-  grid-row: 1 / span 3;
-  grid-area: ice-cream;
-  max-block-size: 595px;
-  min-block-size: 355px;
-  max-inline-size: 355px;
-  min-inline-size: 229px;
+
+  grid-row: span 2;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 
 }
 
 .tape__picture {
-  grid-area: tape__picture;
+
+  grid-row: span 2;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 
 }
 
 .books__picture {
-  grid-area: books__picture;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 
 }
 
 .street__picture {
+  grid-column: span 2;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
+}
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-block-start: max(40px, 60px);
+  block-size: clamp(668px, 768px, 1024px);
+  inline-size: 100%;
+}
 
+.footer::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+  border-top: 1px solid #ff0070;
+  border-right: 1px solid #ff0070;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+  border-bottom: 1px solid #ff0070;
+  border-left: 1px solid #ff0070;
 }
 
 
@@ -383,6 +416,8 @@
   .second__card-answer-size {
     block-size: 355px;
   }
+
+
 }
 
 
