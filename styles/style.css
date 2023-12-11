@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   position: relative;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,7 +35,7 @@
   block-size: clamp(668px, 768px, 1024px);
   position: relative;
   display: grid;
-  grid-template-rows: 0.1fr min-content 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   margin-block-end: 20px;
 
 }
@@ -45,6 +45,7 @@
   max-inline-size: 1024px;
 }
 
+/* декоративный элемент верхний */
 .decorated-zone::after {
   position: absolute;
   content: "";
@@ -394,9 +395,22 @@
   border-left: 1px solid #ff0070;
 }
 
+
+@media (max-width: 1000px) {
+  .row__answer-container {
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  .second__card-answer-size {
+    inline-size: 100%;
+    block-size: 174px;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
-    block-size: 1024px;
     grid-template-rows: 1fr 3fr 2fr;
   
   }
@@ -410,16 +424,9 @@
     block-size: 117px;
   }
 
-  .row__answer-container {
-    flex-direction: column;
-    gap: 20px;
 
-  }
 
-  .second__card-answer-size {
-    inline-size: 100%;
-    block-size: 174px;
-  }
+
 }
 
 @media (max-width: 375px) {
