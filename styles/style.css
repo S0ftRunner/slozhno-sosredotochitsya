@@ -7,14 +7,14 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "IBM Plex mono", sans-serif;
-  color: #ff0070;
+  font-family: var(--font-family);
+  color: var(--font-color);
   margin: 0;
   background-color: #000028;
 }
 
 /* сделал для более красивого дизайна */
-.dark__backround-image-header::before {
+.backround-image__header::before {
   content: "";
   position: absolute;
   background-image: var(--background-photo);
@@ -54,8 +54,8 @@
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
-  border-top: 1px solid #ff0070;
-  border-right: 1px solid #ff0070;
+  border-top: var(--border-style);
+  border-right: var(--border-style);
 }
 
 /* декоративный элемент нижний */
@@ -67,8 +67,8 @@
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
-  border-bottom: 1px solid #ff0070;
-  border-left: 1px solid #ff0070;
+  border-bottom: var(--border-style);
+  border-left: var(--border-style);
 }
 
 .header__theme-menu-list {
@@ -105,36 +105,30 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: var(--border-style__hover);
   cursor: pointer;
 }
 
 /* сделал так, чтобы не перебивались цвета границ у активной кнопки */
 .header__theme-menu-button_active:hover {
-  border: 1px solid #ff0070;
+  border: var(--border-style);
   cursor: pointer;
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid #ff0070;
+  border-bottom: var(--border-style);
 }
 
 .header__decoration-rec {
-  margin: 0;
-  margin-block-start: 1rem;
   list-style: none;
-  padding-inline-start: 0;
   right: 0;
-  color: #ff0070;
   text-align: center;
-  font-family: "IBM Plex Mono", sans-serif;
   text-transform: uppercase;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
-  /* 138.889% */
 }
 
 /* Декоративный элемент REC */
@@ -154,8 +148,8 @@
   right: max(19px, 29px);
   inline-size: 9px;
   block-size: 9px;
-  background-color: #ff0070;
-  filter: drop-shadow(0px 0px 4px #ff0070);
+  background-color: var(--font-color);
+  filter: drop-shadow(0px 0px 4px var(--font-color));
 }
 
 .page__title {
@@ -165,7 +159,7 @@
 }
 
 .stylish__text {
-  color: #db00ff;
+  color: var(--stylish-text__color);
   text-shadow: 4px 4px 0px #ff0070;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
@@ -189,7 +183,7 @@
 }
 
 .title-decor {
-  background-color: #ff0070;
+  background-color: var(--font-color);
 }
 
 .hard-to-focus__section {
@@ -199,8 +193,7 @@
 .main {
   padding-inline-start: 20px;
   padding-inline-end: 20px;
-  background-color: #000028;
-  height: 100%;
+  background-color: var(--background-color);
 }
 
 .first-question__section {
@@ -232,21 +225,19 @@
 
 .answer__title {
   display: block;
-  color: #000028;
+  color: var(--answer-title__color);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
-  /* 130% */
 }
 
 .answer__description {
-  color: #F1B2CE;
+  color: var(--answer-description__color);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 23.4px;
-  /* 130% */
 }
 
 .link {
@@ -255,7 +246,7 @@
 }
 
 .link:hover {
-  border-bottom: 1px solid #F1B2CE;
+  border-bottom: 1px solid var(--action-border);
 }
 
 .link:focus {
@@ -263,7 +254,7 @@
 }
 
 .link:focus-visible {
-  outline: 1px solid #F1B2CE;
+  outline: 1px solid --action-border;
   outline-offset: -2px;
 }
 
@@ -379,8 +370,8 @@
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
-  border-top: 1px solid #ff0070;
-  border-right: 1px solid #ff0070;
+  border-top: var(--border-style);
+  border-right: var(--border-style);
 }
 
 .footer::before {
@@ -391,8 +382,8 @@
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
-  border-bottom: 1px solid #ff0070;
-  border-left: 1px solid #ff0070;
+  border-bottom: var(--border-style);
+  border-left: var(--border-style);
 }
 
 

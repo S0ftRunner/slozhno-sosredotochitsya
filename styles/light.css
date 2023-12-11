@@ -3,6 +3,19 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root {
+  --font-family: "IBM Plex mono", sans-serif;
+  --background-photo: url(../images/cover-image-light.png);
+  --font-color: #ff0070;
+  --background-color: #000028;
+  --border-style: 1px solid #ff0070;
+  --border-style__hover: 1px solid rgba(255, 0, 112, 0.4);
+  --stylish-text__color: #db00ff;
+  --answer-title__color: #000028;
+  --answer-description__color: #F1B2CE;
+  --action-border: #F1B2CE;
+}
+
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
@@ -13,8 +26,8 @@
     
 }
 
+/* .backround-image__header::before {
+  --background-photo: url(../images/cover-image-light.png);
+} */
 
-.page.theme_light > marker-rec::before {
- display: none;
-}
 
