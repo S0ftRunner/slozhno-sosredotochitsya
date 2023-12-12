@@ -1,8 +1,3 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
-
 :root {
   --font-family: "IBM Plex mono", sans-serif;
   --background-photo: url(../images/cover-image-dark.png);
@@ -13,7 +8,7 @@
   --title-decor: #ff0070;
   --stylish-text__color: #db00ff;
   --answer-title__color: #000028;
-  --answer-description__color: #F1B2CE;
-  --action-border: #F1B2CE;
-  --link-shadow: rgba(255, 0, 111, 0.80);
+  --answer-description__color: #f1b2ce;
+  --action-border: #f1b2ce;
+  --link-shadow: rgba(255, 0, 111, 0.8);
 }

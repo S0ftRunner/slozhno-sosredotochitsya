@@ -1,32 +1,18 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-
-
 .page.theme_light {
   --font-family: "IBM Plex mono", sans-serif;
   --background-photo: url(../images/cover-image-light.png);
   --font-color: #353430;
-  --background-color: #FFF1F7;
+  --background-color: #fff1f7;
   --border-style: 1px solid #353430;
-  --border-style__hover: 1px solid rgba(50, 49, 45, 0.40);
-  --title-decor: #FF8DCB;
-  --stylish-text__color: #FFC2E6;
+  --border-style__hover: 1px solid rgba(50, 49, 45, 0.4);
+  --title-decor: #ff8dcb;
+  --stylish-text__color: #ffc2e6;
   --answer-title__color: #000028;
   --answer-description__color: #353430;
   --action-border: #353430;
   --link-shadow: rgba(255, 141, 203, 0.8);
-
 }
-
-/* .backround-image__header::before {
-  --background-photo: url(../images/cover-image-light.png);
-} */
 
 .page.theme_light .marker-rec {
   display: none;
 }
-
