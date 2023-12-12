@@ -10,8 +10,10 @@
   --background-color: #000028;
   --border-style: 1px solid #ff0070;
   --border-style__hover: 1px solid rgba(255, 0, 112, 0.4);
+  --title-decor: #ff0070;
   --stylish-text__color: #db00ff;
   --answer-title__color: #000028;
   --answer-description__color: #F1B2CE;
   --action-border: #F1B2CE;
+  --link-shadow: rgba(255, 0, 111, 0.80);
 }

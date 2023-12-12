@@ -10,7 +10,7 @@
   font-family: var(--font-family);
   color: var(--font-color);
   margin: 0;
-  background-color: #000028;
+  background-color: var(--background-color);
 }
 
 /* сделал для более красивого дизайна */
@@ -101,7 +101,7 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid #ff0070;
+  border: var(--border-style);
 }
 
 .header__theme-menu-button:hover {
@@ -183,7 +183,7 @@
 }
 
 .title-decor {
-  background-color: var(--font-color);
+  background-color: var(--title-decor);
 }
 
 .hard-to-focus__section {
@@ -242,7 +242,7 @@
 
 .link {
   text-decoration: none;
-  text-shadow: 2px 2px 0px rgba(255, 0, 111, 0.80);
+  text-shadow: 2px 2px 0px var(--link-shadow);
 }
 
 .link:hover {
@@ -254,7 +254,7 @@
 }
 
 .link:focus-visible {
-  outline: 1px solid --action-border;
+  outline: 1px solid var(--action-border);
   outline-offset: -2px;
 }
 
