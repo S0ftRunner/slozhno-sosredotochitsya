@@ -24,20 +24,17 @@
   top: 0;
   /* тут я добавил к размеру хедера его паддинг 20px */
   block-size: clamp(688px, 788px, 1048px);
-  width: 100vw;
+  inline-size: 100vw;
 }
 
 .header {
   padding-block-start: 20px;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
-  background-size: contain;
-  block-size: clamp(668px, 768px, 1024px);
-  position: relative;
+  min-block-size: 768px;
   display: grid;
-  grid-template-rows: minmax(auto, 1fr) minmax(auto, min-content) 1fr;
-  margin-block-end: 20px;
-
+  grid-template-rows: 1fr min-content 1fr;
+  position: relative;
 }
 
 .centering {
@@ -149,6 +146,7 @@
 }
 
 .page__title {
+  align-self: flex-start;
   margin-inline-start: -20px;
   word-spacing: 0.2rem;
 }
@@ -163,8 +161,7 @@
 }
 
 .page__description {
-  margin-block-start: 7.2rem;
-  margin-block-end: clamp(66px, 134px, 183px);
+  align-self: center;
   justify-self: end;
   color: #000028;
   font-size: 18px;
@@ -279,7 +276,7 @@
 
 .third-question__section {
   display: grid;
-  margin-block-start: max(125px);
+  margin-block-start: 125px;
   grid-template-columns: minmax(236px, 315px) minmax(472px, 649px);
   gap: 20px;
 }
@@ -396,6 +393,11 @@
 }
 
 @media (max-width: 768px) {
+
+  /* .header {
+    grid-template-rows: 2fr 1fr 1fr;
+    } */
+
   .header__theme-menu {
     justify-self: end;
     align-self: center;
@@ -412,16 +414,16 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  .page__description {
+  /* .page__description {
     block-size: 117px;
-  }
+  } */
 
 
 
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 745px) {
   .first-question__section {
     grid-template-columns: none;
     grid-template-rows: 47px auto;
@@ -431,6 +433,8 @@
     grid-template-columns: none;
     grid-template-rows: 47px auto;
   }
+
+
   
   
 }
