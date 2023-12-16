@@ -257,7 +257,7 @@
 }
 
 .second__question-title {
-  inline-size: clamp(236px, 315px, 355px);
+  inline-size: 30%;
   justify-self: flex-start;
 }
 
@@ -297,6 +297,8 @@
 }
 
 .pictures__container {
+  block-size: 130%;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(auto, 260px) minmax(auto, 315px) minmax( auto, 435px);
@@ -413,9 +415,9 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  .second__question-title {
+  /* .second__question-title {
     inline-size: 236px;
-  }
+  } */
 
   /* .page__description {
     block-size: 117px;
@@ -465,6 +467,57 @@
   .second__card-answer-size {
     block-size: 355px;
   }
+
+
+  .pictures__container {
+    block-size: 130%;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+  }
+  
+  .sunset__picture {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.ice-cream__picture {
+  grid-row: 2;
+  grid-column: span 2;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+
+}
+
+.tape__picture {
+
+  grid-row: 3;
+  grid-column: span 2;
+
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+
+}
+
+.books__picture {
+  grid-row: 4;
+  grid-column: span 2;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+
+}
+
+.street__picture {
+  grid-column: span 2;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
 
 
 }
