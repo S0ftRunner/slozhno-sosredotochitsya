@@ -29,9 +29,10 @@
 
 .header {
   padding-block-start: 20px;
+  padding-block-end: 20px;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
-  min-block-size: 768px;
+  block-size: 768px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
@@ -395,7 +396,7 @@
 @media (max-width: 768px) {
 
   /* .header {
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: max-content min-content 1fr;
     } */
 
   .header__theme-menu {
