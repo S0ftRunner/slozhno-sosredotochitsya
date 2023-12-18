@@ -301,12 +301,14 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(auto, 260px) minmax(auto, 315px) minmax( auto, 435px);
+  grid-template-rows: minmax(auto, 260px) minmax(auto, 315px) minmax(
+      auto,
+      435px
+    );
   gap: 20px;
 }
 
 .sunset__picture {
-
   grid-column: span 2;
   inline-size: 100%;
   block-size: 100%;
@@ -314,28 +316,23 @@
 }
 
 .ice-cream__picture {
-
   grid-row: span 2;
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
-
 }
 
 .tape__picture {
-
   grid-row: span 2;
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
-
 }
 
 .books__picture {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
-
 }
 
 .street__picture {
@@ -379,12 +376,10 @@
   border-left: var(--border-style);
 }
 
-
 @media (max-width: 1000px) {
   .row__answer-container {
     flex-direction: column;
     gap: 20px;
-
   }
 
   .second__card-answer-size {
@@ -394,25 +389,26 @@
 }
 
 @media (max-width: 768px) {
-
-  /* .header {
-    grid-template-rows: max-content min-content 1fr;
-    } */
+  .header {
+    block-size: 1024px;
+  }
 
   .header__theme-menu {
     justify-self: end;
     align-self: center;
   }
 
-  .header__theme-menu-list { 
-   
+  .header__theme-menu-list {
     grid-template-columns: none;
     grid-template-rows: repeat(3, 26px);
   }
 
-
   .page__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .third-question__section {
+    margin-block-start: 100px;
   }
 
   /* .second__question-title {
@@ -422,28 +418,18 @@
   /* .page__description {
     block-size: 117px;
   } */
-
-
-
-
 }
 
 @media (max-width: 745px) {
-
-
   .first-question__section {
     grid-template-columns: none;
     grid-template-rows: 47px auto;
   }
-  
+
   .third-question__section {
     grid-template-columns: none;
     grid-template-rows: 47px auto;
   }
-
-
-  
-  
 }
 
 @media (max-width: 700px) {
@@ -451,7 +437,6 @@
     justify-self: center;
     inline-size: 100%;
   }
-
 }
 
 @media (max-width: 375px) {
@@ -461,13 +446,11 @@
 
   .row__answer-container {
     gap: 20px;
-
   }
 
   .second__card-answer-size {
     block-size: 355px;
   }
-
 
   .pictures__container {
     block-size: 130%;
@@ -476,49 +459,42 @@
     grid-template-rows: repeat(5, 1fr);
     gap: 20px;
   }
-  
+
   .sunset__picture {
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .ice-cream__picture {
+    grid-row: 2;
+    grid-column: span 2;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .tape__picture {
+    grid-row: 3;
+    grid-column: span 2;
+
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .books__picture {
+    grid-row: 4;
+    grid-column: span 2;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .street__picture {
+    grid-column: span 2;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
 }
-
-.ice-cream__picture {
-  grid-row: 2;
-  grid-column: span 2;
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-
-}
-
-.tape__picture {
-
-  grid-row: 3;
-  grid-column: span 2;
-
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-
-}
-
-.books__picture {
-  grid-row: 4;
-  grid-column: span 2;
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-
-}
-
-.street__picture {
-  grid-column: span 2;
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-}
-
-
-}
-
