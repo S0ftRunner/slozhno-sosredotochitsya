@@ -405,6 +405,7 @@
 
   .page__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+      margin-inline-start: -2px;
   }
 
   .third-question__section {
@@ -440,8 +441,23 @@
 }
 
 @media (max-width: 375px) {
+
+  .header {
+    padding-block-start: 10px;
+    padding-block-end: 10px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    block-size: 668px;
+  }
+
+
   .page {
     justify-content: center;
+  }
+
+  .main {
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
   }
 
   .row__answer-container {
