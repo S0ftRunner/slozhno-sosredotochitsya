@@ -395,10 +395,7 @@
     grid-template-rows: repeat(3, 26px);
   }
 
-  .page__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-inline-start: -2px;
-  }
+
 
   .third-question__section {
     margin-block-start: 100px;
@@ -568,6 +565,11 @@
 
   .page {
     justify-content: center;
+  }
+
+  .page__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-inline-start: -2px;
   }
 
   .main {
