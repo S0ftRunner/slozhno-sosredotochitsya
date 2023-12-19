@@ -452,7 +452,7 @@
   }
 
   .second__card-answer-size {
-    max-block-size: 200px;
+    block-size: 200px;
   }
 
   .first-question__section {
