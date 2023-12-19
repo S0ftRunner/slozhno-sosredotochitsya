@@ -17,6 +17,8 @@
   --answer-title__color: #000028;
   --answer-description__color: #F1B2CE;
   --action-border: #F1B2CE;
+  --display-rec: block;
+
 }
 
 /* .backround-image__header::before {

@@ -127,6 +127,7 @@
 
 /* Декоративный элемент REC */
 .marker-rec::before {
+  display: var(--display-rec);
   content: "rec";
   position: absolute;
   top: max(10px, 20px);
@@ -136,6 +137,7 @@
 /* Декоративный элемент точка */
 .marker-rec::after {
   position: absolute;
+  display: var(--display-rec);
   content: "";
   border-radius: 50%;
   top: max(18px, 28px);
@@ -526,6 +528,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .second__card-answer-size {
+    block-size: 200px;
+  }
+}
+
 @media (max-width: 375px) {
   .header {
     padding-block-start: 10px;
@@ -590,5 +598,42 @@
   
   .footer.decorated-zone::before {
     bottom: 10px;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-family: "IBM Plex mono", sans-serif;
+    --background-photo: url(../images/cover-image-dark.png);
+    --font-color: #ff0070;
+    --background-color: #000028;
+    --border-style: 1px solid #ff0070;
+    --border-style__hover: 1px solid rgba(255, 0, 112, 0.4);
+    --title-decor: #ff0070;
+    --stylish-text__color: #db00ff;
+    --answer-title__color: #000028;
+    --answer-description__color: #F1B2CE;
+    --action-border: #F1B2CE;
+    --display-rec: block;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --font-family: "IBM Plex mono", sans-serif;
+    --background-photo: url(../images/cover-image-light.png);
+    --font-color: #353430;
+    --background-color: #fff1f7;
+    --border-style: 1px solid #353430;
+    --border-style__hover: 1px solid rgba(50, 49, 45, 0.4);
+    --title-decor: #ff8dcb;
+    --stylish-text__color: #ffc2e6;
+    --answer-title__color: #000028;
+    --answer-description__color: #353430;
+    --action-border: #353430;
+    --link-shadow: rgba(255, 141, 203, 0.8);
+    --display-rec: none;
+
   }
 }
