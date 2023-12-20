@@ -166,7 +166,7 @@
 .page__description {
   align-self: center;
   justify-self: end;
-  color: #000028;
+  color: var(--answer-title__color);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -349,6 +349,11 @@
   block-size: 768px;
   inline-size: 100%;
 }
+
+.footer__shadow {
+  text-shadow: 2px 2px 0px #FF0070;
+}
+
 .footer.decorated-zone::after {
   top: 20px;
   right: 0;
@@ -617,7 +622,7 @@
     --border-style__hover: 1px solid rgba(50, 49, 45, 0.4);
     --title-decor: #ff8dcb;
     --stylish-text__color: #ffc2e6;
-    --answer-title__color: #000028;
+    --answer-title__color: #353430;
     --answer-description__color: #353430;
     --action-border: #353430;
     --link-shadow: rgba(255, 141, 203, 0.8);
