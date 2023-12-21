@@ -1,7 +1,9 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   position: relative;
-  background-image: var(--background-photo);
+  overflow-x: hidden;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,17 +11,27 @@
   color: var(--font-color);
   margin: 0;
   background-color: var(--background-color);
-  /* 
-    я убрал overflow: hidden, но появилась теперь горизонтальная прокрутка 
-    проверил на всех элементах outline, никакой элемент не вылезает за 
-    границы блока страницы
-  */
+}
+
+/* сделал для более красивого дизайна */
+.backround-image__header::before {
+  content: "";
+  position: absolute;
+  background-image: var(--background-photo);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  block-size:  768px;
+  inline-size: 100vw;
 }
 
 .header {
-  padding: 20px;
-  min-block-size: 768px;
-  inline-size: 100%;
+  padding-block-start: 20px;
+  padding-block-end: 20px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  block-size: 768px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
@@ -34,8 +46,8 @@
 .decorated-zone::after {
   position: absolute;
   content: "";
-  top: 20px;
-  right: 20px;
+  top: max(10px, 20px);
+  right: max(10px, 20px);
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
@@ -47,8 +59,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: max(10px, 20px);
+  left: max(10px, 20px);
   inline-size: 25px;
   block-size: 25px;
   background-color: transparent;
@@ -66,8 +78,9 @@
 }
 
 .header__theme-menu-button {
-  padding-inline: 13px;
-  padding-block: 2px;
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+  block-size: 26px;
   background-color: transparent;
   text-align: center;
   font-family: inherit;
@@ -82,11 +95,16 @@
 
 .header__theme-menu-button_active {
   border: var(--border-style);
-  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
   border: var(--border-style__hover);
+  cursor: pointer;
+}
+
+/* сделал так, чтобы не перебивались цвета границ у активной кнопки */
+.header__theme-menu-button_active:hover {
+  border: var(--border-style);
   cursor: pointer;
 }
 
@@ -97,6 +115,7 @@
 
 .header__decoration-rec {
   list-style: none;
+  right: 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
@@ -107,7 +126,6 @@
 
 /* Декоративный элемент REC */
 .marker-rec::before {
-  display: var(--display-rec);
   content: "rec";
   position: absolute;
   top: max(10px, 20px);
@@ -117,7 +135,6 @@
 /* Декоративный элемент точка */
 .marker-rec::after {
   position: absolute;
-  display: var(--display-rec);
   content: "";
   border-radius: 50%;
   top: max(18px, 28px);
@@ -146,12 +163,13 @@
 .page__description {
   align-self: center;
   justify-self: end;
-  color: var(--answer-title__color);
+  color: #000028;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
   inline-size: 50%;
+  /* 130% */
 }
 
 .title-decor {
@@ -165,6 +183,7 @@
 .main {
   padding-inline-start: 20px;
   padding-inline-end: 20px;
+  background-color: var(--background-color);
 }
 
 .first-question__section {
@@ -179,6 +198,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
+  /* 130% */
 }
 
 .column__answer-container {
@@ -240,21 +260,15 @@
   justify-self: flex-start;
 }
 
-/* такое ощущение, что я делаю костыли */
-.second__card-answer-size {
-  inline-size: 315px;
-  block-size: 384px;
-}
-
 .row__answer-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .third-question__section {
   display: grid;
-  margin-block-start: 125px;
+  margin-block-start: 80px;
   grid-template-columns: minmax(236px, 315px) minmax(472px, 649px);
   gap: 20px;
 }
@@ -265,6 +279,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 23.4px;
+  /* 130% */
 }
 
 .pictures__section {
@@ -275,6 +290,8 @@
 }
 
 .pictures__container {
+  /* block-size: 130%; */
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(auto, 260px) minmax(auto, 315px) minmax(
@@ -324,30 +341,50 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-block-start: 60px;
-  min-block-size: 768px;
+  margin-block-start: max(40px, 60px);
+  block-size: 768px;
   inline-size: 100%;
 }
 
-.footer__shadow {
-  text-shadow: 2px 2px 0px #FF0070;
+.footer::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 0;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+  border-top: var(--border-style);
+  border-right: var(--border-style);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  inline-size: 25px;
+  block-size: 25px;
+  background-color: transparent;
+  border-bottom: var(--border-style);
+  border-left: var(--border-style);
 }
 
 @media (max-width: 1000px) {
   .row__answer-container {
-    flex-direction: column;
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
     gap: 20px;
   }
 
   .second__card-answer-size {
     inline-size: 100%;
-    block-size: 174px;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    min-block-size: 1024px;
+    block-size: 1024px;
   }
 
   .backround-image__header::before {
@@ -364,23 +401,40 @@
     grid-template-rows: repeat(3, 26px);
   }
 
-
+  .page__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-inline-start: -2px;
+  }
 
   .third-question__section {
     margin-block-start: 100px;
   }
 
+
   .pictures__container {
+    /* block-size: 130%; */
+  
+   
     grid-template-rows: minmax(auto, 192px) minmax(auto, 230px) minmax(
         auto,
-        318px
+        325px
       );
+
   }
+
+
 
   .footer {
-    min-block-size: 1024px;
+    block-size: 1024px;
   }
 
+  /* .second__question-title {
+    inline-size: 236px;
+  } */
+
+  /* .page__description {
+    block-size: 117px;
+  } */
 }
 
 @media (max-width: 745px) {
@@ -400,20 +454,14 @@
     justify-self: center;
     inline-size: 100%;
   }
-  .second__card-answer-size {
-    block-size: 200px;
-  }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 500px) {
+
   .backround-image__header::before {
     block-size: 668px;
   }
-
-  .second__card-answer-size {
-    block-size: 200px;
-  }
-
+  
   .first-question__section {
     margin-block-start: 40px;
   }
@@ -424,14 +472,17 @@
 
   .second__question-title {
     inline-size: 100%;
+   
   }
 
   .third-question__section {
     gap: 40px;
   }
+  
 
   .pictures__section {
     margin-block-start: 50px;
+ 
     gap: 10px;
   }
 
@@ -439,10 +490,7 @@
     block-size: 130%;
     display: grid;
     grid-template-columns: none;
-    grid-template-rows: minmax(auto, 142px) minmax(auto, 355px) minmax(
-        auto,
-        237px
-      ) minmax(auto, 355px) minmax(auto, 237px);
+    grid-template-rows: minmax(auto, 142px) minmax(auto, 355px) minmax(auto, 237px) minmax(auto, 355px) minmax(auto, 237px);
     gap: 10px;
   }
 
@@ -482,50 +530,20 @@
     block-size: 100%;
     object-fit: cover;
   }
-}
 
-@media (max-width: 480px) {
-  .second__card-answer-size {
-    block-size: 200px;
-  }
 }
 
 @media (max-width: 375px) {
   .header {
-    padding: 10px;
-    min-block-size: 668px;
-  }
-
-  .decorated-zone::after {
-    top: 10px;
-    right: 10px;
-  }
-
-  .decorated-zone::before {
-    bottom: 10px;
-    left: 10px;
-  }
-
-  .marker-rec::before {
-    content: "rec";
-    position: absolute;
-    top: 10px;
-    right: 38px;
-  }
-
-  /* Декоративный элемент точка */
-  .marker-rec::after {
-    top: 18px;
-    right: 19px;
+    padding-block-start: 10px;
+    padding-block-end: 10px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    block-size: 668px;
   }
 
   .page {
     justify-content: center;
-  }
-
-  .page__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-inline-start: -2px;
   }
 
   .main {
@@ -533,28 +551,11 @@
     padding-inline-end: 10px;
   }
 
-  .row__answer-container {
-    gap: 20px;
-  }
-
   .second__card-answer-size {
-    block-size: 315px;
-  }
-
-  .third-question__section {
-    margin-block-start: 118px;
+    max-block-size: 355px;
   }
 
   .footer {
-    min-block-size: 668px;
-    margin-block-start: 40px;
-  }
-
-  .footer.decorated-zone::after {
-    top: 10px;
-  }
-  
-  .footer.decorated-zone::before {
-    bottom: 10px;
+    block-size: 668px;
   }
 }
