@@ -1,9 +1,6 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   position: relative;
-  overflow-x: hidden;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,8 +103,8 @@
   display: var(--display-rec);
   content: "rec";
   position: absolute;
-  top: max(10px, 20px);
-  right: max(38px, 50px);
+  top: 20px;
+  right: 50px;
 }
 
 /* Декоративный элемент точка */
@@ -116,8 +113,8 @@
   position: absolute;
   content: "";
   border-radius: 50%;
-  top: max(18px, 28px);
-  right: max(19px, 29px);
+  top: 28px;
+  right: 29px;
   inline-size: 9px;
   block-size: 9px;
   background-color: var(--font-color);
@@ -260,14 +257,13 @@
 }
 
 .pictures__section {
-  margin-block-start: max(50px, 80px);
+  margin-block-start: 80px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .pictures__container {
-  /* block-size: 130%; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(auto, 260px) minmax(auto, 315px) minmax(
@@ -317,7 +313,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-block-start: max(40px, 60px);
+  margin-block-start: 60px;
   min-block-size: 768px;
   inline-size: 100%;
 }
@@ -325,8 +321,8 @@
 @media (max-width: 1000px) {
   .row__answer-container {
     grid-template-columns: none;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1px;
+    grid-template-rows: repeat(min-content, 1fr);
+    gap: 20px;
   }
 
   .second__card-answer-size {
@@ -355,16 +351,9 @@
 
   .page__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-inline-start: -2px;
-  }
-
-  .third-question__section {
-    margin-block-start: 100px;
   }
 
   .pictures__container {
-    /* block-size: 130%; */
-
     grid-template-rows: minmax(auto, 192px) minmax(auto, 230px) minmax(
         auto,
         325px
@@ -414,13 +403,11 @@
 
   .pictures__section {
     margin-block-start: 50px;
-
     gap: 10px;
   }
 
   .pictures__container {
     block-size: 130%;
-    display: grid;
     grid-template-columns: none;
     grid-template-rows:
       minmax(auto, 142px) minmax(auto, 355px) minmax(auto, 237px)
@@ -484,19 +471,23 @@
   }
 
   /* Декоративный элемент REC */
-.marker-rec::before {
-  top: 10px;
-  right: 38px;
-}
+  .marker-rec::before {
+    top: 10px;
+    right: 38px;
+  }
 
-/* Декоративный элемент точка */
-.marker-rec::after {
-  top: 18px;
-  right: 19px;
-}
+  /* Декоративный элемент точка */
+  .marker-rec::after {
+    top: 18px;
+    right: 19px;
+  }
 
   .page {
     justify-content: center;
+  }
+
+  .page__title {
+    margin-inline-start: -2px;
   }
 
   .main {
@@ -510,5 +501,6 @@
 
   .footer {
     min-block-size: 668px;
+    margin-block-start: 40px;
   }
 }
