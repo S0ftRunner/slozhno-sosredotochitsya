@@ -103,6 +103,7 @@
 
 /* Декоративный элемент REC */
 .marker-rec::before {
+  display: var(--display-rec);
   content: "rec";
   position: absolute;
   top: max(10px, 20px);
@@ -111,6 +112,7 @@
 
 /* Декоративный элемент точка */
 .marker-rec::after {
+  display: var(--display-rec);
   position: absolute;
   content: "";
   border-radius: 50%;
@@ -140,13 +142,12 @@
 .page__description {
   align-self: center;
   justify-self: end;
-  color: #000028;
+  color: var(--answer-title__color);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px;
   inline-size: 50%;
-  /* 130% */
 }
 
 .title-decor {
