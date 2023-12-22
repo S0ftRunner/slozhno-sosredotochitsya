@@ -10,28 +10,12 @@
   font-family: var(--font-family);
   color: var(--font-color);
   margin: 0;
-  background-color: var(--background-color);
-}
-
-/* сделал для более красивого дизайна */
-.backround-image__header::before {
-  content: "";
-  position: absolute;
   background-image: var(--background-photo);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 0;
-  block-size:  768px;
-  inline-size: 100vw;
 }
 
 .header {
-  padding-block-start: 20px;
-  padding-block-end: 20px;
-  padding-inline-start: 20px;
-  padding-inline-end: 20px;
-  block-size: 768px;
+  padding: 20px;
+  min-block-size: 768px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
@@ -78,9 +62,8 @@
 }
 
 .header__theme-menu-button {
-  padding-inline-start: 13px;
-  padding-inline-end: 13px;
-  block-size: 26px;
+  padding-inline: 13px;
+  padding-block: 2px;
   background-color: transparent;
   text-align: center;
   font-family: inherit;
@@ -95,16 +78,11 @@
 
 .header__theme-menu-button_active {
   border: var(--border-style);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
   border: var(--border-style__hover);
-  cursor: pointer;
-}
-
-/* сделал так, чтобы не перебивались цвета границ у активной кнопки */
-.header__theme-menu-button_active:hover {
-  border: var(--border-style);
   cursor: pointer;
 }
 
@@ -115,7 +93,6 @@
 
 .header__decoration-rec {
   list-style: none;
-  right: 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
@@ -183,7 +160,6 @@
 .main {
   padding-inline-start: 20px;
   padding-inline-end: 20px;
-  background-color: var(--background-color);
 }
 
 .first-question__section {
@@ -291,7 +267,6 @@
 
 .pictures__container {
   /* block-size: 130%; */
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(auto, 260px) minmax(auto, 315px) minmax(
@@ -342,32 +317,8 @@
   align-items: center;
   position: relative;
   margin-block-start: max(40px, 60px);
-  block-size: 768px;
+  min-block-size: 768px;
   inline-size: 100%;
-}
-
-.footer::after {
-  position: absolute;
-  content: "";
-  top: 20px;
-  right: 0;
-  inline-size: 25px;
-  block-size: 25px;
-  background-color: transparent;
-  border-top: var(--border-style);
-  border-right: var(--border-style);
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  inline-size: 25px;
-  block-size: 25px;
-  background-color: transparent;
-  border-bottom: var(--border-style);
-  border-left: var(--border-style);
 }
 
 @media (max-width: 1000px) {
@@ -410,31 +361,18 @@
     margin-block-start: 100px;
   }
 
-
   .pictures__container {
     /* block-size: 130%; */
-  
-   
+
     grid-template-rows: minmax(auto, 192px) minmax(auto, 230px) minmax(
         auto,
         325px
       );
-
   }
-
-
 
   .footer {
-    block-size: 1024px;
+    min-block-size: 1024px;
   }
-
-  /* .second__question-title {
-    inline-size: 236px;
-  } */
-
-  /* .page__description {
-    block-size: 117px;
-  } */
 }
 
 @media (max-width: 745px) {
@@ -457,11 +395,6 @@
 }
 
 @media (max-width: 500px) {
-
-  .backround-image__header::before {
-    block-size: 668px;
-  }
-  
   .first-question__section {
     margin-block-start: 40px;
   }
@@ -472,17 +405,15 @@
 
   .second__question-title {
     inline-size: 100%;
-   
   }
 
   .third-question__section {
     gap: 40px;
   }
-  
 
   .pictures__section {
     margin-block-start: 50px;
- 
+
     gap: 10px;
   }
 
@@ -490,7 +421,10 @@
     block-size: 130%;
     display: grid;
     grid-template-columns: none;
-    grid-template-rows: minmax(auto, 142px) minmax(auto, 355px) minmax(auto, 237px) minmax(auto, 355px) minmax(auto, 237px);
+    grid-template-rows: minmax(auto, 142px) minmax(auto, 355px) minmax(
+        auto,
+        237px
+      ) minmax(auto, 355px) minmax(auto, 237px);
     gap: 10px;
   }
 
@@ -530,16 +464,12 @@
     block-size: 100%;
     object-fit: cover;
   }
-
 }
 
 @media (max-width: 375px) {
   .header {
-    padding-block-start: 10px;
-    padding-block-end: 10px;
-    padding-inline-start: 10px;
-    padding-inline-end: 10px;
-    block-size: 668px;
+    padding: 10px;
+    min-block-size: 668px;
   }
 
   .page {
@@ -556,6 +486,6 @@
   }
 
   .footer {
-    block-size: 668px;
+    min-block-size: 668px;
   }
 }
