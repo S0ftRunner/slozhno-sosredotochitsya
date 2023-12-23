@@ -335,10 +335,6 @@
     min-block-size: 1024px;
   }
 
-  .backround-image__header::before {
-    block-size: 1024px;
-  }
-
   .header__theme-menu {
     justify-self: end;
     align-self: center;
@@ -415,41 +411,23 @@
     gap: 10px;
   }
 
-  .sunset__picture {
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
-  }
-
   .ice-cream__picture {
     grid-row: 2;
     grid-column: span 2;
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
   }
 
   .tape__picture {
     grid-row: 3;
     grid-column: span 2;
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
   }
 
   .books__picture {
     grid-row: 4;
     grid-column: span 2;
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
   }
 
   .street__picture {
     grid-column: span 2;
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
   }
 }
 

@@ -15,7 +15,6 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --font-family: "IBM Plex mono", sans-serif;
     --background-photo: url(../images/cover-image-light.png);
     --font-color: #353430;
     --background-color: #fff1f7;
