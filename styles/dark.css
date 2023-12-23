@@ -9,7 +9,8 @@
   --stylish-text__color: #db00ff;
   --answer-title__color: #000028;
   --answer-description__color: #F1B2CE;
-  --action-border: #F1B2CE;
+  --action-border: #ff0070;
+  --link-shadow: rgba(255, 0, 111, 0.8);
   --display-rec: block;
 }
 
@@ -24,7 +25,8 @@
     --stylish-text__color: #db00ff;
     --answer-title__color: #000028;
     --answer-description__color: #F1B2CE;
-    --action-border: #F1B2CE;
+    --action-border: #ff0070;
+    --link-shadow: rgba(255, 0, 111, 0.8);
     --display-rec: block;
   }
 }
